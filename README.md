@@ -5,7 +5,7 @@ Jozef Konings, Glenn Magerman and Dieter Van Esbroeck
 Date: June 2, 2023
 
 
-##1. Overview
+## 1. Overview
 This file contains the necessary information to replicate all results in the paper.
 
 The analysis uses confidential firm-level data, which we have acquired through a confidentiality agreement with Flanders innovation and Entrepreneurship Agency (VLAIO), so we are unable to disclose these datasets.
@@ -18,7 +18,7 @@ Codes are organized according to sections. Each section has its folder. Results 
 
 Results have been obtained using Stata 16. The program installs the necessary ado-files to run the codes in Stata.
 
-##2. Description per section
+## 2. Description per section
 2.0 _master
 Copy the folder to some location on your machine.
 
@@ -37,13 +37,13 @@ This folder contains all do-files to generate random datasets with the same vari
 
 5.gen_data_aggregate: creates a dataset containing a yearly unbalanced panel of firms for 2005-2021, whether they got support or not and all necessary variables for the aggregate analysis of decompositions and reallocation. Output: data_aggregate.dta.
 
-###2.2 generated_data
+### 2.2 generated_data
 Contains all generated data-files from folder ‘do_generate_data’
 
-###2.3 tmp
+### 2.3 tmp
 Contains the temporary intermediate datafiles created in all do-files.
 
-###2.4 section_2
+### 2.4 section_2
 These do-files generate results for section 2, data and summary statistics.
 
 1.supportclassification.do: makes descriptives of support allocation, by premium and by sector. Input: VLAIO_support.dta. Output: figure 1a, figure 1b and figure 2.
@@ -52,7 +52,7 @@ These do-files generate results for section 2, data and summary statistics.
 
 2.2.sumstats_aggregate.do: makes descriptives for the sample of the aggregate analysis. Input: data_aggregate.dta. Output: table 3, figure 4, table 13 and table 15.
 
-###2.5 section_3
+### 2.5 section_3
 These do-files generate results for section 3, the impact of Covid support measures on firm performance. 
 
 1.didyearly.do: estimates the yearly diff-in-diff regressions, Y_{it}=\beta D_{it}+\alpha_i+\lambda_{jt}+\varepsilon_{it}, and tabulates results. Input: data_didyearly. Output: table 4, table 5 and table 10.
@@ -67,7 +67,7 @@ These do-files generate results for section 3, the impact of Covid support measu
 
 3.exitimpact.do: estimates the regressions on the impact of the VLAIO support measures on the propensity to exit.  Input: data_exitimpact.dta. Output: table 6, table 7 and table 9.
 
-###2.6 section_4
+### 2.6 section_4
 These do-files generate results for section 4, aggregate productivity growth, covid support and reallocation.
 
 1.1.MP_decomp_LP.do: implements the Melitz Polanec decomposition (2015) for the total sample of firms using labour productivity. Input: data_aggregate.dta. Output: figure 5 results, table 17.
